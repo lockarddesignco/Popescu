@@ -399,15 +399,83 @@
             <div class="form-wrapper">
                 <h2>Start the Conversation</h2>
                 <p>Discuss your vision with our architectural team.</p>
-                <form class="lead-form" onsubmit="event.preventDefault();">
-                    <div class="form-row">
-                        <input type="text" placeholder="Name" aria-label="Name" required>
-                        <input type="tel" placeholder="Phone" aria-label="Phone" required>
+                <form class="lead-form" name="consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="consultation">
+                    <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name" class="field-label">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone" class="field-label">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email" class="field-label">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="zip" class="field-label">Project ZIP Code</label>
+                                <input type="text" id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address" aria-label="Email Address" required>
+
+                    <div class="form-divider"></div>
+
+                    <fieldset class="form-section form-fieldset">
+                        <legend class="field-label">Scope of Interest</legend>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="scope[]" value="bespoke-kitchen">
+                                <span class="checkbox-box"></span>
+                                <span class="checkbox-text">Bespoke Kitchen Renovation</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="scope[]" value="luxury-bath">
+                                <span class="checkbox-box"></span>
+                                <span class="checkbox-text">Luxury Bath Environments</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="scope[]" value="whole-home">
+                                <span class="checkbox-box"></span>
+                                <span class="checkbox-text">Whole-Home Renovation</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="scope[]" value="outdoor-kitchen">
+                                <span class="checkbox-box"></span>
+                                <span class="checkbox-text">Outdoor Kitchens & Living</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="scope[]" value="adu">
+                                <span class="checkbox-box"></span>
+                                <span class="checkbox-text">ADU / Guest Residence</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="scope[]" value="consulting">
+                                <span class="checkbox-box"></span>
+                                <span class="checkbox-text">Architectural Consulting</span>
+                            </label>
+                        </div>
+                        <span class="field-helper">Select all that apply.</span>
+                    </fieldset>
+
+                    <div class="form-divider"></div>
+
+                    <div class="form-section">
+                        <div class="form-field">
+                            <label for="context" class="field-label">Project Context <span class="label-optional">(Optional)</span></label>
+                            <textarea id="context" name="context" rows="5" placeholder="Anything helpful for us to know before we connect."></textarea>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-inverse">Request Consultation</button>
+
+                    <button type="submit" class="btn btn-form-submit">Request Consultation</button>
                 </form>
             </div>
         </div>
