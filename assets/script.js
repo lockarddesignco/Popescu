@@ -122,6 +122,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
+    // Mobile Scroll Reveal for Related Services
+    const relatedCards = document.querySelectorAll('.related-card');
+    
+    if (relatedCards.length > 0 && window.matchMedia('(max-width: 1023px)').matches) {
+        const relatedObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -60% 0px' // Trigger when element reaches top 40% of viewport
+        });
+        
+        relatedCards.forEach(card => relatedObserver.observe(card));
+    }
+
     // Chat Widget Logic
     const chatWidget = document.querySelector('.chat-widget-container');
     const chatLauncher = document.querySelector('.chat-launcher'); // Use launcher wrapper for click

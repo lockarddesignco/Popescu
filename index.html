@@ -67,12 +67,26 @@
     <div class="nav-overlay">
         <button class="nav-close" aria-label="Close navigation">&times;</button>
         <nav class="main-nav">
-            <a href="#services" class="nav-link">Kitchens</a>
-            <a href="#process" class="nav-link">Process</a>
+            <a href="#kitchens" class="nav-link">Kitchens</a>
             <a href="#projects" class="nav-link">Projects</a>
+            <a href="#related-services" class="nav-link">Expertise</a>
             <a href="#testimonials" class="nav-link">Testimonials</a>
-            <a href="#consultation" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
+        
+        <div class="nav-footer">
+            <div class="nav-actions">
+                <a href="tel:+19258191735" class="nav-action-icon" aria-label="Call Us">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </a>
+                <a href="mailto:contact@popescuconstruction.com" class="nav-action-icon" aria-label="Email Us">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            <div class="nav-logo-mark">
+                <img src="/assets/site_logo.webp" alt="Popescu Construction">
+            </div>
+        </div>
     </div>
 
     <!-- ============================================
@@ -80,6 +94,7 @@
          ============================================ -->
     <section class="hero">
         <button class="nav-toggle" aria-label="Open navigation">
+            <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
@@ -94,7 +109,7 @@
                 <p class="hero-subtitle">Transform your home with custom craftsmanship and architectural excellence. Specializing in premium kitchen renovations for discerning homeowners.</p>
                 <div class="hero-ctas">
                     <a href="tel:+19258191735" class="btn btn-primary">Call (925) 819-1735</a>
-                    <a href="#consultation" class="btn btn-secondary">Request Consultation</a>
+                    <a href="#contact" class="btn btn-secondary">Request Consultation</a>
                 </div>
                 
                 <div class="hero-trust">
@@ -126,7 +141,7 @@
     <!-- ============================================
          KITCHEN-FIRST SERVICES SECTION
          ============================================ -->
-    <section id="services" class="services">
+    <section id="kitchens" class="services">
         <div class="container">
             <h2 class="section-title">Designed With Restraint. Built Without Compromise.</h2>
             <p class="section-intro">We design and build kitchens for homeowners who value precision, longevity, and quiet confidence.</p>
@@ -188,13 +203,13 @@
     <!-- ============================================
          VISUAL GALLERY TRANSITION
          ============================================ -->
-    <section id="gallery" class="gallery">
+    <section id="projects" class="gallery">
         <div class="container">
             <div class="gallery-grid">
                 <!-- Left Column (60%) -->
                 <div class="gallery-item large">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Modern luxury kitchen with large island, oak cabinetry, and floor-to-ceiling windows" loading="lazy">
+                        <img src="/assets/images/tall-luxury-kitchen.jpeg" alt="Orinda Estate luxury kitchen by Popescu Construction" loading="lazy">
                         <div class="gallery-overlay"></div>
                     </div>
                     <div class="gallery-caption">
@@ -208,7 +223,7 @@
                     <!-- Top Image (Taller) -->
                     <div class="gallery-item medium">
                         <div class="gallery-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bespoke cabinetry and hardware" loading="lazy">
+                            <img src="/assets/images/wide-kitchen-day.jpeg" alt="Bespoke cabinetry and hardware" loading="lazy">
                             <div class="gallery-overlay"></div>
                         </div>
                         <div class="gallery-caption">
@@ -220,7 +235,7 @@
                     <!-- Bottom Image -->
                     <div class="gallery-item small">
                         <div class="gallery-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marble detail and craftsmanship" loading="lazy">
+                            <img src="/assets/images/wide-kitchen-night.jpeg" alt="Marble detail and craftsmanship" loading="lazy">
                             <div class="gallery-overlay"></div>
                         </div>
                         <div class="gallery-caption">
@@ -264,35 +279,35 @@
     <!-- ============================================
          RELATED SERVICES (BEYOND THE KITCHEN)
          ============================================ -->
-    <section class="related-services">
+    <section id="related-services" class="related-services">
         <div class="container">
             <h2 class="section-title text-light">Beyond the Kitchen</h2>
             <p class="section-intro text-light-dim">For clients who think in environments, not rooms.</p>
             
             <div class="related-grid">
                 <div class="related-card">
-                    <img src="https://images.unsplash.com/photo-1552321554-5fefe845bedc?auto=format&fit=crop&w=800&q=80" alt="Luxury Spa Bathroom" class="card-bg-image">
+                    <img src="/assets/images/luxury-bath.jpeg" alt="Luxury Spa Bathroom" class="card-bg-image">
                     <div class="related-content">
                         <h3>Luxury Bath Environments</h3>
                         <p>Spa-grade bathrooms designed with restraint. Stone, steam, and lighting calibrated for daily ritual, not trends.</p>
                     </div>
                 </div>
                 <div class="related-card">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Outdoor Kitchen and Living" class="card-bg-image">
+                    <img src="/assets/images/outdoor-kitchen.jpeg" alt="Outdoor Kitchen and Living" class="card-bg-image">
                     <div class="related-content">
                         <h3>Outdoor Kitchens & Living</h3>
                         <p>Architectural outdoor kitchens and entertaining spaces built for longevity, fire, weather, and real use. Not seasonal. Permanent.</p>
                     </div>
                 </div>
                 <div class="related-card">
-                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Modern Guest Residence" class="card-bg-image">
+                    <img src="/assets/images/ADU.jpeg" alt="Modern Guest Residence" class="card-bg-image">
                     <div class="related-content">
                         <h3>ADUs & Guest Residences</h3>
                         <p>Detached living spaces designed and executed as primary architecture. Private, precise, and fully integrated into the property.</p>
                     </div>
                 </div>
                 <div class="related-card">
-                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80" alt="Whole Home Renovation" class="card-bg-image">
+                    <img src="/assets/images/home-reno.jpeg" alt="Whole Home Renovation" class="card-bg-image">
                     <div class="related-content">
                         <h3>Whole-Home Renovation</h3>
                         <p>For clients who prefer one vision, one builder, and no compromises across the entire home.</p>
@@ -301,7 +316,7 @@
             </div>
             
             <div class="related-cta">
-                <a href="#consultation" class="text-link">Discuss a Broader Project &rarr;</a>
+                <a href="#contact" class="text-link">Discuss a Broader Project &rarr;</a>
             </div>
         </div>
     </section>
@@ -379,7 +394,7 @@
     <!-- ============================================
          ANCHOR CTA SECTION (FORM)
          ============================================ -->
-    <section class="anchor-cta luxury-form-section">
+    <section id="contact" class="anchor-cta luxury-form-section">
         <div class="container">
             <div class="form-wrapper">
                 <h2>Start the Conversation</h2>
@@ -404,10 +419,13 @@
     <footer class="footer luxury-footer">
         <div class="container">
             <div class="footer-minimal">
-                <div class="footer-brand">POPESCU CONSTRUCTION</div>
+                <div class="footer-logo">
+                    <img src="/assets/site_logo.webp" alt="Popescu Construction">
+                </div>
+                <div class="footer-divider"></div>
                 <div class="footer-details">
                     <p>2122 Asenath Ct, Walnut Creek, CA 94598</p>
-                    <p class="footer-phone">(925) 819-1735</p>
+                    <p class="footer-phone"><a href="tel:+19258191735">(925) 819-1735</a></p>
                 </div>
                 <div class="footer-copyright">
                     &copy; 2024 Popescu Construction. All rights reserved.
